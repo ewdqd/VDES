@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="proto">
+      <UniqueIdentifier>{391386bc-46c4-4a68-ad69-c91965107bcf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vdes_service.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vdes_global.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fragmentmanager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="slotscheduler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="globallistener.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uplinkaddressedstatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uplinkshortackstatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uplinkshortnoackstatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="downlinkaddressedstatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="downlinkshortackstatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="downlinkshortnoackstatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="broadcaststatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pagingstatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vdesstatemachine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="client_session.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="udp_receiver_worker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="database_manager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="file_transfer_manager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="zk_client.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="socket_utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vdes_messages.pb.cc">
+      <Filter>proto</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_pool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="db_connection_pool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vdes_service.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vdes_global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fragmentmanager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="slotscheduler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="globallistener.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="uplinkaddressedstatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="uplinkshortackstatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="uplinkshortnoackstatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="downlinkaddressedstatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="downlinkshortackstatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="downlinkshortnoackstatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="broadcaststatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pagingstatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vdesstatemachine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="client_session.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="udp_receiver_worker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="database_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="file_transfer_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="zk_client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="socket_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vdes_messages.pb.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_pool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="db_connection_pool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

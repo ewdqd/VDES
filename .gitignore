@@ -1,0 +1,66 @@
+# Build outputs
+build/
+*/build/
+*/*/build/
+x64/
+*/x64/
+*/*/x64/
+*.o
+*.obj
+*.exe
+*.recipe
+*.app
+
+# Qt Creator
+.qtcreator/
+
+# VS / VSCode
+.vs/
+.vscode/
+*.suo
+*.user
+*.sln.docstates
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# Temp / cache
+*.tmp
+**/ipch/
+**/CopilotIndices/
+**/FileContentIndex/
+**/copilot-chat/
+*.vsidx
+
+# Claude settings (project-specific)
+.claude/settings.local.json
+
+# Protobuf generated (keep .proto, ignore generated .pb.h/.pb.cc)
+**/vdes_messages.pb.h
+**/vdes_messages.pb.cc
+
+# Binary / executable
+VdesService/vdes_service
+
+# Cluster config
+vdes_cluster.json
+
+# Uploaded files
+vdes_files/
+
+# VS project build logs
+*.tlog/
+*.tlog/*
+*.log
+*.lastbuildstate
+*.unsuccessfulbuild
+*.FileListAbsolute.txt
+*.idb
+*.pdb
+
+# QMake
+.qmake.stash
+moc_predefs.h
+moc_*.cpp

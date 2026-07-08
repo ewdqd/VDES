@@ -1,0 +1,114 @@
+syntax = "proto3";
+package vdes;
+
+// 原有请求
+message SendShortAckReq {
+    int32 specified_slot = 1;
+    uint32 dest_id = 2;
+    uint32 my_mmsi = 3;
+    uint32 data = 4;
+}
+
+message SendShortNoAckReq {
+    int32 specified_slot = 1;
+    uint32 dest_id = 2;
+    uint32 my_mmsi = 3;
+    uint32 data = 4;
+    bool has_dest = 5;
+    bytes payload = 6;
+}
+
+message SendAddressedReq {
+    int32 specified_slot = 1;
+    uint32 dest_id = 2;
+    uint32 my_mmsi = 3;
+    bytes data = 4;
+    string mime_type = 5;
+    string file_name = 6;
+}
+
+message SendConfigReq {
+    int32 ship_index = 1;
+    bytes config_data = 2;
+}
+
+// 文件传输请求
+message FileTransferRequest {
+    uint32 dest_ship_id = 1;
+    string file_name = 2;
+    uint64 file_size = 3;
+    string md5 = 4;
+    uint32 chunk_size = 5;
+    string sha256 = 6;
+    string mime_type = 7;
+}
+
+message ResumeRequest {
+    string transfer_id = 1;
+    uint32 last_received_chunk = 2;
+}
+
+// 客户端请求
+message ClientRequest {
+    oneof req {
+        SendShortAckReq send_short_ack = 1;
+        SendShortNoAckReq send_short_noack = 2;
+        SendAddressedReq send_addressed = 3;
+        SendConfigReq send_config = 4;
+        FileTransferRequest file_transfer_req = 5;
+        FileChunk file_chunk = 6;
+        ResumeRequest resume_req = 7;
+    }
+}
+
+// 原有推送
+message SlotUpdate {
+    int32 slot = 1;
+}
+
+message LogEntry {
+    int64 timestamp = 1;
+    int32 slot = 2;
+    uint32 ship_id = 3;
+    string direction = 4;
+    string msg_type = 5;
+    string summary = 6;
+    string detail = 7;
+}
+
+message FileTransferInfo {
+    string file_id = 1;
+    string file_name = 2;
+    int64 total_size = 3;
+    string md5 = 4;
+    int32 chunk_size = 5;
+    int32 total_chunks = 6;
+    string sha256 = 7;
+    string mime_type = 8;
+}
+
+message FileChunk {
+    string file_id = 1;
+    int32 chunk_index = 2;
+    bytes data = 3;
+    bool is_last = 4;
+}
+
+message FileTransferStatus {
+    string transfer_id = 1;
+    uint32 completed_chunks = 2;
+    uint32 total_chunks = 3;
+    string status = 4;
+    string error_msg = 5;
+}
+
+message ServerPush {
+    oneof push {
+        SlotUpdate slot_update = 1;
+        LogEntry log_entry = 2;
+        bytes broadcast_data = 3;
+        FileTransferInfo file_info = 4;
+        FileChunk file_chunk = 5;
+        FileTransferStatus file_status = 6;
+    }
+}
